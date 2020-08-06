@@ -7,7 +7,7 @@ env:
 
 script:
   - docker build --pull --tag "$IMAGE_NAME" .
-  - docker run "$IMAGE_NAME" packer | grep packer
+  - docker run "$IMAGE_NAME" terraform --version | grep Terraform
 
 after_script:
   - docker images
