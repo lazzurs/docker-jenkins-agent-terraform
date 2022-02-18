@@ -1,2 +1,5 @@
 # docker-jenkins-agent-terraform
-Jenkins agent container with the latest Terraform installed.
+
+Docker container for running Terraform/Terragrunt on a Jenkins agent.
+
+
