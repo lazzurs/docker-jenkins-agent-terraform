@@ -16,7 +16,7 @@ RUN apt -y install gnupg2
 RUN apt -y install wget unzip curl jq
 
 # Install Terraform
-RUN if [ $(uname -m) = "x86_64" ]; then curl "https://releases.hashicorp.com/terraform/terraform_${terraform_version}/terraform_${terraform_version}_linux_amd64.zip" -o "terraform.zip"; elif [ $(uname -m) = "aarch64" ]; then curl "https://releases.hashicorp.com/terraform/terraform_${terraform_version}/terraform_${terraform_version}_linux_arm64.zip" -o "terraform.zip"; fi
+RUN if [ $(uname -m) = "x86_64" ]; then curl "https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip" -o "terraform.zip"; elif [ $(uname -m) = "aarch64" ]; then curl "https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_arm64.zip" -o "terraform.zip"; fi
 RUN unzip terraform.zip -d /usr/local/bin/
 
 # Install Terragrunt
