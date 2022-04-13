@@ -1,6 +1,6 @@
 FROM jenkins/inbound-agent:latest
 
-ARG terraform_version=1.1.6
+ARG terraform_version=1.1.8
 ARG terragrunt_version=0.36.1
 
 # Switch to root
